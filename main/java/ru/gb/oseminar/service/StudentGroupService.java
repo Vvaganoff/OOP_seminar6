@@ -1,9 +1,6 @@
 package ru.gb.oseminar.service;
 
-import ru.gb.oseminar.data.Student;
-import ru.gb.oseminar.data.UserComparator;
-import ru.gb.oseminar.data.StudentGroup;
-import ru.gb.oseminar.data.Teacher;
+import ru.gb.oseminar.data.*;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -50,7 +47,7 @@ public class StudentGroupService {
 
     public List<Student> getSortedByFIOStudentGroup(){
         List<Student> students = new ArrayList<>(studentGroup.getStudents());
-        students.sort(new UserComparator<Student>());
+        new SortGroup().SortStudentsGroup(students);
         return students;
     }
 }

@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.logging.Logger;
 
 public class TeacherView implements UserView<Teacher>{
-
+//
     Logger logger = Logger.getLogger(StudentView.class.getName());
 
     @Override

@@ -28,7 +28,8 @@ public class StudentService implements UserService<Student> {
             }
         }
         countMaxId++;
-        Student student = new Student(firstName, secondName, patronymic, dateOfBirth, countMaxId);
+        Student student = new CreateUser<Student>().CreateNewUser (new Student(),firstName, secondName, patronymic, dateOfBirth);
+        student.setStudentId(countMaxId);
         students.add(student);
     }
 }

@@ -2,6 +2,7 @@ package ru.gb.oseminar.service;
 
 import ru.gb.oseminar.data.Student;
 import ru.gb.oseminar.data.Teacher;
+import ru.gb.oseminar.service.CreateUser;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -29,7 +30,8 @@ public class TeacherService implements UserService<Teacher> {
                 }
             }
             countMaxId++;
-            Teacher teacher = new Teacher(firstName, secondName, patronymic, dateOfBirth, countMaxId);
+            Teacher teacher = new CreateUser<Teacher>().CreateNewUser(new Teacher(), firstName, secondName, patronymic, dateOfBirth);
+            teacher.setTeacherId(countMaxId);
             teachers.add(teacher);
         }
 }

@@ -15,6 +15,10 @@ public class Teacher extends User{
         super(firstName, secondName, patronymic, dateOfBirth);
     }
 
+    public Teacher() {
+        super();
+    }
+
     public Long getTeacherId() {
         return teacherId;
     }

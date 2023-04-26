@@ -2,6 +2,7 @@ package ru.gb.oseminar.controller;
 
 import ru.gb.oseminar.data.Student;
 import ru.gb.oseminar.data.Teacher;
+import ru.gb.oseminar.data.User;
 import ru.gb.oseminar.service.StudentGroupService;
 import ru.gb.oseminar.service.StudentService;
 import ru.gb.oseminar.view.StudentView;
@@ -38,7 +39,7 @@ public class StudentController implements UserController<Student>{
     }
 
     public void getSortedListByFIOStudentFromStudentGroup(){
-        List<Student> students = studentGroupService.getSortedByFIOStudentGroup();
+        List<User> students = studentGroupService.getSortedByFIOStudentGroup();
         studentView.sendOnConsole(students);
     }
 }
